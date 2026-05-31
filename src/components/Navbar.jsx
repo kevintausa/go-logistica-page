@@ -31,11 +31,6 @@ export default function Navbar() {
 
 				<ul className={`navbar__menu ${isMenuOpen ? 'active' : ''}`}>
 					<li>
-						<a href="#quienes-somos" onClick={closeMenu}>
-							Quiénes somos
-						</a>
-					</li>
-					<li>
 						<a href="#servicios" onClick={closeMenu}>
 							Servicios
 						</a>
@@ -43,6 +38,11 @@ export default function Navbar() {
 					<li>
 						<a href="#proceso" onClick={closeMenu}>
 							Proceso
+						</a>
+					</li>
+					<li>
+						<a href="#quienes-somos" onClick={closeMenu}>
+							Quiénes somos
 						</a>
 					</li>
 					<li>

@@ -271,6 +271,14 @@ h3 {
 	margin: 0;
 }
 
+.service-card__actions {
+	display: flex;
+	flex-wrap: wrap;
+	gap: 0.75rem;
+	margin-top: auto;
+	padding-top: 0.5rem;
+}
+
 .service-card__benefits {
 	list-style: none;
 	margin: 0.75rem 0 1.25rem;
@@ -567,6 +575,130 @@ h3 {
 	}
 }
 
+/* ============================================================
+   SERVICE PAGE
+   ============================================================ */
+.service-hero {
+	position: relative;
+	min-height: 60vh;
+	display: flex;
+	align-items: center;
+	max-width: 100%;
+	padding: 0;
+	overflow: hidden;
+	margin-top: -1px;
+}
+
+.service-hero__image {
+	position: absolute;
+	inset: 0;
+	z-index: 0;
+}
+
+.service-hero__image img {
+	width: 100%;
+	height: 100%;
+	object-fit: cover;
+	display: block;
+}
+
+.service-hero__overlay {
+	position: absolute;
+	inset: 0;
+	background: linear-gradient(
+		135deg,
+		rgba(1, 15, 31, 0.94) 0%,
+		rgba(3, 31, 58, 0.88) 50%,
+		rgba(2, 47, 50, 0.82) 100%
+	);
+	z-index: 1;
+}
+
+.service-hero__content {
+	position: relative;
+	z-index: 2;
+	padding: clamp(5rem, 10vh, 8rem) clamp(1rem, 5vw, 5rem) clamp(3rem, 6vh, 4rem);
+	max-width: 1200px;
+	margin-inline: auto;
+	width: 100%;
+}
+
+.service-hero__desc {
+	font-size: clamp(1.05rem, 2vw, 1.2rem);
+	line-height: 1.75;
+	color: rgba(247, 251, 255, 0.9);
+	max-width: 600px;
+	margin: 0;
+}
+
+.service-detail {
+	padding-block: clamp(3rem, 6vw, 5rem);
+	max-width: 1200px;
+	margin-inline: auto;
+}
+
+.service-detail__grid {
+	display: grid;
+	grid-template-columns: 1fr;
+	gap: 2rem;
+}
+
+.service-detail__body {
+	background: rgba(2, 18, 32, 0.6);
+	border-radius: 28px;
+	border: 1px solid rgba(255, 255, 255, 0.06);
+	padding: clamp(2rem, 4vw, 3rem);
+}
+
+.service-detail__body h2 {
+	margin-bottom: 1.25rem;
+	font-size: clamp(1.4rem, 3vw, 1.8rem);
+}
+
+.service-detail__text {
+	display: flex;
+	flex-direction: column;
+	gap: 1rem;
+	margin-bottom: 2.5rem;
+}
+
+.service-detail__text p {
+	color: rgba(247, 251, 255, 0.88);
+	line-height: 1.8;
+	margin: 0;
+	font-size: 1.05rem;
+}
+
+.service-detail__benefits {
+	list-style: none;
+	margin: 0 0 2.5rem;
+	padding: 0;
+	display: flex;
+	flex-direction: column;
+	gap: 0.85rem;
+}
+
+.service-detail__benefits li {
+	display: flex;
+	align-items: flex-start;
+	gap: 0.75rem;
+	color: rgba(247, 251, 255, 0.92);
+	font-size: 1rem;
+	line-height: 1.5;
+}
+
+.service-detail__benefits svg {
+	color: var(--color-emerald);
+	flex-shrink: 0;
+	margin-top: 2px;
+}
+
+.service-detail__cta {
+	display: flex;
+	flex-wrap: wrap;
+	gap: 1rem;
+}
+
 @media (max-width: 480px) {
 	.hero__actions {
 		flex-direction: column;
@@ -579,5 +711,9 @@ h3 {
 
 	.stats {
 		grid-template-columns: 1fr;
+	}
+
+	.service-detail__cta {
+		flex-direction: column;
 	}
 }
